@@ -1,5 +1,4 @@
 import copy
-
 from mazekit.maze import Maze
 
 
