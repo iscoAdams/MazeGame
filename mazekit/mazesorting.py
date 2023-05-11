@@ -9,7 +9,7 @@ def compare(maze1:Maze, maze2:Maze) -> bool: #  true if harder which is the latt
 # sort the mazes based on the number of invalid positions (invalid_count)
 def sort_logic(mazes:List['Maze']) -> List['Maze']:
     random.shuffle(mazes) #O(n)
-    def quick_sort(array) -> List['Maze']: #O(nlogn)
+    def quick_sort(array) : #O(nlogn)
         if len(array) <= 1:
             return array
         pivot = array[random.randint(0, len(array)-1)]

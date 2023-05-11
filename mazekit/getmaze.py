@@ -9,14 +9,15 @@ class Option(Enum):
     medium = "medium"
     hard = "hard"
 
-def get_maze(option:Option) -> Maze:
+def get_maze(option:Option) -> 'Maze':
     mazes = MazeGenerator.generate_some_mazes(20)
     sorted_mazes = sort_logic(mazes)
     index = 0
+    sz = len(sorted_mazes)
     if option == "easy":
-        index = random.randint(0, len(sorted_mazes)//2)
+        index = random.randint(0, sz//2)
     elif option == "medium":
-        index = random.randint(len(sorted_mazes)//2, len(sorted_mazes)//2+1)
+        index = random.randint(sz//2, sz//2+1)
     elif option == "hard":
-        index = random.randint(len(sorted_mazes)//2+1, len(sorted_mazes)-2)
+        index = random.randint(sz//2+1, sz-2)
     return sorted_mazes[index]

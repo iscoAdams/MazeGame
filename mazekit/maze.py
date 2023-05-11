@@ -81,7 +81,8 @@ class Maze:
     @property
     def props(self):
         return self._props
-    def print_grid(self, filename=None):
-        for row in self.grid:
+    @staticmethod
+    def print_grid(maze, filename=None):
+        for row in maze.grid:
             print("".join(row), file=filename, end="\n")
     
