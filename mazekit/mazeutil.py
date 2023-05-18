@@ -21,9 +21,9 @@ class MazeUtil:
             return True
         return False
     
-    def print_solved_maze(maze,path): #without overwriting the original maze
+    def print_solved_maze(maze,path): #without overwriting the original maze, total O(n^2)
         if not path: return
-        maze = copy.deepcopy(maze)
+        maze = copy.deepcopy(maze) #O(n^2)
         for row, col in path[1:-1]:
             maze.grid[row][col] = "o"
         Maze.print_grid(maze)

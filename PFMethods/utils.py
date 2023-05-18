@@ -1,4 +1,4 @@
-def get_path(predecessors,start,goal):
+def get_path(predecessors,start,goal): #O(n)
     current = goal
     path = []
     while current != None:

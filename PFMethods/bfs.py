@@ -4,7 +4,7 @@ from typing import List, Tuple
 from PFMethods.utils import get_path
 
 
-def bfs(maze, start=None, goal=None):
+def bfs(maze, start=None, goal=None): #O(V+E), but V is n^2, and E is at most 4 edges, so it's O(n^2)
     start = start or maze.props.start
     goal = goal or maze.props.goal
     queue = deque()

@@ -13,7 +13,7 @@ class Props:
         self._invalid_count += invalid_count
 
     @staticmethod
-    def is_harder_than(maze, other) -> bool:
+    def compare (maze, other) -> bool:
         return maze.invalid_count > other.invalid_count
     @property
     def rows(self):

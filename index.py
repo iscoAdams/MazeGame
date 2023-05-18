@@ -11,7 +11,7 @@ from PFMethods.dfs import dfs
 sys.stdout = open('out.txt', 'w')
 
 if '__main__':
-    maze = get_maze(Option.easy)
+    maze = get_maze(Option.easy) 
     print("initial maze:")
     Maze.print_grid(maze)
     print("start", maze.props.start, "goal", maze.props.goal, sep=" ", end="\n")

@@ -7,7 +7,7 @@ class Maze:
         self._props = Props()
 
     @staticmethod
-    def generate_maze(rows=None, cols=None) -> 'Maze':
+    def generate_maze(rows=None, cols=None) -> 'Maze': #O(n^2)
         maze = Maze()
         if not rows or not cols:
             maze.props.rows = rows = random.randint(8, 50)
@@ -23,7 +23,7 @@ class Maze:
         while len(maze.props.invalid_positions) < maze.props.invalid_count: #O(n)
             row = random.randint(0, rows-1)
             col = random.randint(0, cols-1)
-            if (row, col) != maze.props.start and (row, col) != maze.props.goal:
+            if (row, col) not in [maze.props.start, maze.props.goal]:
                 maze.props.invalid_positions.add((row, col))
 
         for row, col in maze.props.invalid_positions: #O(n)
@@ -34,7 +34,7 @@ class Maze:
         return maze
         
     @staticmethod
-    def read_maze(filename) -> Optional['Maze']: #may the input grid is invalid and return None
+    def read_maze(filename) -> Optional['Maze']: #O(n^2) & may the input grid is invalid and return None
         try:
             maze = Maze()
             with open(filename,'r') as f:
@@ -61,12 +61,12 @@ class Maze:
             print(f"Cannot open {filename}: {e.strerror}")
             raise SystemExit(1)
         
-    def is_valid_grid(self,maze) -> bool:
-        rows = len(maze)
+    def is_valid_grid(self,grid) -> bool: #O(n^2)
+        rows = len(grid)
         if not rows:
             return False
-        len_of_row = len(maze[0])
-        for row in maze:
+        len_of_row = len(grid[0])
+        for row in grid:
             if len(row) != len_of_row:
                 return False
         return True
@@ -82,7 +82,7 @@ class Maze:
     def props(self):
         return self._props
     @staticmethod
-    def print_grid(maze, filename=None):
+    def print_grid(maze, filename=None): #O(n)
         for row in maze.grid:
             print("".join(row), file=filename, end="\n")
     

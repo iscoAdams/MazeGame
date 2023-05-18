@@ -1,7 +1,7 @@
 from mazekit.mazeutil import MazeUtil
 from PFMethods.utils import get_path
 
-def dfs(maze, start=None, goal=None):
+def dfs(maze, start=None, goal=None): #O(V+E) plus recursion overhead, we can say O(n^2) as V = n^2
     start = start or maze.props.start
     goal = goal or maze.props.goal
     predecessors = {start: None}   # dictionary that maps each node to its source node
