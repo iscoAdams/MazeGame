@@ -4,7 +4,7 @@ from mazekit.maze import Maze
 from mazekit.mazeutil import MazeUtil
 from mazekit.props import Props
 from mazekit.mazegenerator import MazeGenerator
-from mazekit.mazesorting import sort_logic
+from mazekit.mazesorting import sort_maze
 from mazekit.getmaze import get_maze, Option
 from PFMethods.bfs import bfs
 from PFMethods.dfs import dfs

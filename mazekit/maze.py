@@ -34,7 +34,7 @@ class Maze:
         return maze
         
     @staticmethod
-    def read_maze(filename) -> Optional['Maze']: #O(n^2) & may the input grid is invalid and return None
+    def read_maze(filename='../maze.txt') -> Optional['Maze']: #O(n^2) & may the input grid is invalid and return None
         try:
             maze = Maze()
             with open(filename,'r') as f:
