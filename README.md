@@ -30,21 +30,21 @@ in my case, I used the second option, and there is an output sample inside out.t
 ## project structure
 
 maze-game/
-├─mazekit/
-├── get_maze.py
-├── maze.py
-├── mazegenerator.py
-├── mazesorting.py
-├── mazeutil.txt
-├── props.py
-├─PFMethods/
-├── bfs.py
-├── dfs.py
-├── utils.py
-├─index.py
-├─maze.txt
-├─out.txt
-├─README.md
+├── mazekit/
+| ├── get_maze.py
+| ├── maze.py
+| ├── mazegenerator.py
+| ├── mazesorting.py
+| ├── mazeutil.txt
+| ├── props.py
+├── PFMethods/
+| ├── bfs.py
+| ├── dfs.py
+| ├── utils.py
+├─ index.py
+├─ maze.txt
+├─ out.txt
+├─ README.md
 
 ## Notes
 
@@ -52,3 +52,11 @@ maze-game/
 - the engine is not fully completed yet, so there are some bugs and issues that need to be fixed.
 - it only supports walls as invalid positions
 - there is no UI yet, so the engine is only used through the terminal
+
+## contributors
+
+- Yassa-Alqess
+- Mark-bahaa
+- Kero-magdy
+- Kareem-salama
+- Nancy-khaled
