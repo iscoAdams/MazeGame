@@ -29,6 +29,7 @@ in my case, I used the second option, and there is an output sample inside out.t
 
 ## project structure
 
+```bash
 maze-game/
 ├── mazekit/
 | ├── get_maze.py
@@ -45,6 +46,7 @@ maze-game/
 ├─ maze.txt
 ├─ out.txt
 ├─ README.md
+```
 
 ## Notes
 
