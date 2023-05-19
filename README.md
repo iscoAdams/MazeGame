@@ -13,10 +13,14 @@ The Maze Game is a Python-based engine that allows users to interact with mazes.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/iscoAdams/maze-game.git
+   git clone https://github.com/iscoAdams/maze-game.git 
+   ```
+2. Navigate to the project directory:
+
+   ```bash
+   cd maze-game
    ```
 
-2. Navigate to the project directory:
 
 ## Usage
 
