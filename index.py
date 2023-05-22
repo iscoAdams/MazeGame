@@ -17,7 +17,6 @@ if '__main__':
     print("start", maze.props.start, "goal", maze.props.goal, sep=" ", end="\n")
     print('\n\n')
     
-
     bfs_path = bfs(maze)
     assert bfs_path is not None
     print("bfsPath:", bfs_path, sep=" ", end="\n\n")

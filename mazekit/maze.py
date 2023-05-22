@@ -13,7 +13,7 @@ class Maze:
             maze.props.rows = rows = random.randint(8, 50)
             maze.props.cols = cols = random.randint(8, 50)
         # print(f"Generating maze of size {rows}x{cols}\nto print it u can call print_grid()")
-        maze.grid = [["." for _ in range(cols)] for _ in range(rows)] #O(n*m)
+        maze.grid = [["." for _ in range(cols)] for _ in range(rows)] #O(n*m) or O(n^2)
         maze.props.start = (0,0)
         while maze.props.goal == None or maze.props.goal == maze.props.start:
             maze.props.goal = (random.randint(0, rows-1), random.randint(0, cols-1))
@@ -34,11 +34,11 @@ class Maze:
         return maze
         
     @staticmethod
-    def read_maze(filename='../maze.txt') -> Optional['Maze']: #O(n^2) & may the input grid is invalid and return None
+    def read_maze(filename='../maze.txt')  : #O(n^2) & may the input grid is invalid and return None
         try:
             maze = Maze()
             with open(filename,'r') as f:
-                lines = f.readlines() #O(n)
+                lines = f.readlines() #O(n) 
                 maze.props.rows = len(lines)
                 maze.props.cols = len(lines[0].strip("\n"))
                 maze.grid = [list(line.strip("\n")) for line in lines]
@@ -72,17 +72,17 @@ class Maze:
         return True
 
     #some accessors/mutators
-    @property
+    @property #getter
     def grid(self):
         return self._grid
     @grid.setter
     def grid(self, grid): 
         self._grid = grid
-    @property
+    @property #getter
     def props(self):
         return self._props
     @staticmethod
-    def print_grid(maze, filename=None): #O(n)
+    def print_grid(maze, filename=None): #O(n) because we read line by line. 
         for row in maze.grid:
             print("".join(row), file=filename, end="\n")
     

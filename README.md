@@ -63,6 +63,6 @@ maze-game/
 
 - Yassa-Alqess
 - Mark-bahaa
-- Kero-magdy
+- kirolos-magdy
 - Kareem-salama
 - Nancy-khaled

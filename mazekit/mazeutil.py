@@ -1,7 +1,6 @@
 import copy
 from mazekit.maze import Maze
 
-
 class MazeUtil:
     def __init__(self, maze):
         self.maze = maze
@@ -25,5 +24,5 @@ class MazeUtil:
         if not path: return
         maze = copy.deepcopy(maze) #O(n^2)
         for row, col in path[1:-1]:
-            maze.grid[row][col] = "o"
+            maze.grid[row][col] = "p"
         Maze.print_grid(maze)

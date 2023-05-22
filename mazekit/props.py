@@ -7,14 +7,17 @@ class Props:
         self._invalid_count = 0
         self._invalid_positions = set()
         self._invalid_chars = ["X","x","#", "-", "|", "+", "*"]
+
     def __str__(self): #parsing the props of the maze
         return f"Rows: {self._rows}\nCols: {self._cols}\nStart: {self._start}\nGoal: {self._goal}\nInvalid Count: {self._invalid_count}\nInvalid Positions: {self._invalid_positions}\nInvalid Chars: {self._invalid_chars}"
+
     def __iadd__(self, invalid_count):
         self._invalid_count += invalid_count
 
     @staticmethod
     def compare (maze, other) -> bool:
         return maze.invalid_count > other.invalid_count
+        
     @property
     def rows(self):
         return self._rows
@@ -51,11 +54,10 @@ class Props:
     @invalid_positions.setter
     def invalid_positions(self, invalid_positions):
         self._invalid_positions = invalid_positions
-    def add_invalid_position(self, invalid_position):
-        self._invalid_positions += invalid_position
     @property
     def invalid_chars(self):
         return self._invalid_chars
     @invalid_chars.setter
     def add_invalid_char(self, invalid_char):
         self._invalid_chars.append(invalid_char)
+
